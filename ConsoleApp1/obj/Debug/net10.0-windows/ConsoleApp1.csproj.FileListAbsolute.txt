@@ -38,3 +38,4 @@ C:\Users\greg\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0-windows\refint
 C:\Users\greg\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0-windows\ConsoleApp1.pdb
 C:\Users\greg\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0-windows\ConsoleApp1.genruntimeconfig.cache
 C:\Users\greg\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0-windows\ref\ConsoleApp1.dll
+C:\Users\greg\Downloads\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0-windows\ConsoleApp1.sourcelink.json
