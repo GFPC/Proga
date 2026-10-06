@@ -1,0 +1,12 @@
+F:\Projects\My\CSharp\Proga\Model\bin\Debug\net9.0\Model.deps.json
+F:\Projects\My\CSharp\Proga\Model\bin\Debug\net9.0\Model.dll
+F:\Projects\My\CSharp\Proga\Model\bin\Debug\net9.0\Model.pdb
+F:\Projects\My\CSharp\Proga\Model\obj\Debug\net9.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projects\My\CSharp\Proga\Model\obj\Debug\net9.0\Model.AssemblyInfoInputs.cache
+F:\Projects\My\CSharp\Proga\Model\obj\Debug\net9.0\Model.AssemblyInfo.cs
+F:\Projects\My\CSharp\Proga\Model\obj\Debug\net9.0\Model.csproj.CoreCompileInputs.cache
+F:\Projects\My\CSharp\Proga\Model\obj\Debug\net9.0\Model.sourcelink.json
+F:\Projects\My\CSharp\Proga\Model\obj\Debug\net9.0\Model.dll
+F:\Projects\My\CSharp\Proga\Model\obj\Debug\net9.0\refint\Model.dll
+F:\Projects\My\CSharp\Proga\Model\obj\Debug\net9.0\Model.pdb
+F:\Projects\My\CSharp\Proga\Model\obj\Debug\net9.0\ref\Model.dll

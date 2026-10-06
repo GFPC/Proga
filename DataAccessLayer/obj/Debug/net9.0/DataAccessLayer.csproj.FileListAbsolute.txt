@@ -1,0 +1,16 @@
+F:\Projects\My\CSharp\Proga\DataAccessLayer\bin\Debug\net9.0\DataAccessLayer.deps.json
+F:\Projects\My\CSharp\Proga\DataAccessLayer\bin\Debug\net9.0\DataAccessLayer.dll
+F:\Projects\My\CSharp\Proga\DataAccessLayer\bin\Debug\net9.0\DataAccessLayer.pdb
+F:\Projects\My\CSharp\Proga\DataAccessLayer\bin\Debug\net9.0\Model.dll
+F:\Projects\My\CSharp\Proga\DataAccessLayer\bin\Debug\net9.0\Model.pdb
+F:\Projects\My\CSharp\Proga\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.csproj.AssemblyReference.cache
+F:\Projects\My\CSharp\Proga\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projects\My\CSharp\Proga\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.AssemblyInfoInputs.cache
+F:\Projects\My\CSharp\Proga\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.AssemblyInfo.cs
+F:\Projects\My\CSharp\Proga\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+F:\Projects\My\CSharp\Proga\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.sourcelink.json
+F:\Projects\My\CSharp\Proga\DataAccessLayer\obj\Debug\net9.0\DataAcce.E67BD773.Up2Date
+F:\Projects\My\CSharp\Proga\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.dll
+F:\Projects\My\CSharp\Proga\DataAccessLayer\obj\Debug\net9.0\refint\DataAccessLayer.dll
+F:\Projects\My\CSharp\Proga\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.pdb
+F:\Projects\My\CSharp\Proga\DataAccessLayer\obj\Debug\net9.0\ref\DataAccessLayer.dll
