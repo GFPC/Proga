@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "h+Vet4hQlAU=",
+  "dgSpecHash": "X89/RiZ4oJw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\greg\\Downloads\\ConsoleApp1\\Model\\Model.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\Projects\\My\\CSharp\\Proga\\Model\\Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\greg\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.22\\microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\greg\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.22\\microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\greg\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.22\\microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512"
+  ],
   "logs": []
 }

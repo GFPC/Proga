@@ -1,17 +1,24 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using DataAccessLayer;
+using DataAccessLayer.EF;
 using Model;
 
 namespace BusinessLogic
 {
     public class Logic
     {
-        public List<Student> students { get; set; } = new List<Student>();
+        public IRepository<Student> repository { get; set; }
 
-        public Logic()
+        public Logic() : this(new EntityRepository<Student>())
         {
+        }
+
+        public Logic(IRepository<Student> repository)
+        {
+            this.repository = repository;
         }
 
         public void AddStudent(string name, string speciality, string group)
@@ -23,7 +30,7 @@ namespace BusinessLogic
             if (string.IsNullOrWhiteSpace(group))
                 throw new ArgumentException("Группа не может быть пустой.", nameof(group));
 
-            students.Add(new Student
+            repository.Add(new Student
             {
                 Name = name.Trim(),
                 Speciality = speciality.Trim(),
@@ -33,6 +40,7 @@ namespace BusinessLogic
 
         public void DeleteStudent(string name, string speciality, string group)
         {
+            var students = repository.ReadAll();
             var student = students.FirstOrDefault(s =>
                 string.Equals(s.Name, name, StringComparison.OrdinalIgnoreCase) &&
                 string.Equals(s.Speciality, speciality, StringComparison.OrdinalIgnoreCase) &&
@@ -40,15 +48,17 @@ namespace BusinessLogic
 
             if (student != null)
             {
-                students.Remove(student);
+                repository.Delete(student.Id);
             }
         }
 
         public bool DeleteStudentAt(int index)
         {
+            var students = repository.ReadAll();
             if (index >= 0 && index < students.Count)
             {
-                students.RemoveAt(index);
+                var student = students[index];
+                repository.Delete(student.Id);
                 return true;
             }
             return false;
@@ -56,6 +66,7 @@ namespace BusinessLogic
 
         public IReadOnlyList<StudentRecord> GetStudentsRecords()
         {
+            var students = repository.ReadAll();
             var records = new List<StudentRecord>(students.Count);
             for (int i = 0; i < students.Count; i++)
             {
@@ -67,6 +78,7 @@ namespace BusinessLogic
 
         public DataTable GetStudentsDataTable()
         {
+            var students = repository.ReadAll();
             var table = new DataTable("Students");
             table.Columns.Add("№", typeof(int));
             table.Columns.Add("ФИО студента", typeof(string));
@@ -84,6 +96,7 @@ namespace BusinessLogic
 
         public Dictionary<string, int> GetSpecialityDistribution()
         {
+            var students = repository.ReadAll();
             return students
                 .GroupBy(s => s.Speciality.Trim(), StringComparer.OrdinalIgnoreCase)
                 .OrderByDescending(g => g.Count())
@@ -93,13 +106,17 @@ namespace BusinessLogic
 
         public void SeedInitialData()
         {
-            AddStudent("Иванов Иван Иванович", "Программная инженерия", "ПИ-21");
-            AddStudent("Петров Петр Сергеевич", "Информатика и вычислительная техника", "ИВТ-22");
-            AddStudent("Сидорова Анна Алексеевна", "Программная инженерия", "ПИ-21");
-            AddStudent("Кузнецов Дмитрий Олегович", "Информационная безопасность", "ИБ-21");
-            AddStudent("Смирнова Мария Павловна", "Программная инженерия", "ПИ-22");
-            AddStudent("Васильев Алексей Игоревич", "Информатика и вычислительная техника", "ИВТ-21");
-            AddStudent("Морозова Елена Викторовна", "Прикладная математика", "ПМ-21");
+            var currentStudents = repository.ReadAll();
+            if (currentStudents.Count == 0)
+            {
+                AddStudent("Иванов Иван Иванович", "Программная инженерия", "ПИ-21");
+                AddStudent("Петров Петр Сергеевич", "Информатика и вычислительная техника", "ИВТ-22");
+                AddStudent("Сидорова Анна Алексеевна", "Программная инженерия", "ПИ-21");
+                AddStudent("Кузнецов Дмитрий Олегович", "Информационная безопасность", "ИБ-21");
+                AddStudent("Смирнова Мария Павловна", "Программная инженерия", "ПИ-22");
+                AddStudent("Васильев Алексей Игоревич", "Информатика и вычислительная техника", "ИВТ-21");
+                AddStudent("Морозова Елена Викторовна", "Прикладная математика", "ПМ-21");
+            }
         }
     }
 }

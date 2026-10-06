@@ -4,6 +4,9 @@ using System.Windows.Forms;
 using BusinessLogic;
 using ConsoleApp1.Cli;
 using ConsoleApp1.Forms;
+using DataAccessLayer.Dapper;
+using DataAccessLayer.EF;
+using Model;
 
 namespace ConsoleApp1
 {
@@ -16,7 +19,19 @@ namespace ConsoleApp1
             {
                 Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
 
-                var logic = new Logic();
+                // Выбор сценария работы с БД: через EF или через Dapper
+                bool useDapper = args.Any(a => string.Equals(a, "--dapper", StringComparison.OrdinalIgnoreCase));
+
+                Logic logic;
+                if (useDapper)
+                {
+                    logic = new Logic(new DapperRepository<Student>());
+                }
+                else
+                {
+                    logic = new Logic(new EntityRepository<Student>());
+                }
+
                 logic.SeedInitialData();
 
                 bool isCli = args.Any(a => string.Equals(a, "--cli", StringComparison.OrdinalIgnoreCase));
