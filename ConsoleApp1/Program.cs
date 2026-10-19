@@ -4,9 +4,7 @@ using System.Windows.Forms;
 using BusinessLogic;
 using ConsoleApp1.Cli;
 using ConsoleApp1.Forms;
-using DataAccessLayer.Dapper;
-using DataAccessLayer.EF;
-using Model;
+using Ninject;
 
 namespace ConsoleApp1
 {
@@ -19,18 +17,10 @@ namespace ConsoleApp1
             {
                 Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
 
-                // Выбор сценария работы с БД: через EF или через Dapper
                 bool useDapper = args.Any(a => string.Equals(a, "--dapper", StringComparison.OrdinalIgnoreCase));
 
-                Logic logic;
-                if (useDapper)
-                {
-                    logic = new Logic(new DapperRepository<Student>());
-                }
-                else
-                {
-                    logic = new Logic(new EntityRepository<Student>());
-                }
+                IKernel ninjectKernel = new StandardKernel(new SimpleConfigModule(useDapper));
+                Logic logic = ninjectKernel.Get<Logic>();
 
                 logic.SeedInitialData();
 

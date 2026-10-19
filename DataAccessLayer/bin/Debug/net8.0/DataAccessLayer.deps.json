@@ -9,7 +9,6 @@
       "DataAccessLayer/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
-          "Microsoft.Data.Sqlite": "8.0.11",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.11",
           "Model": "1.0.0"
         },
@@ -23,12 +22,6 @@
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.1.35.13827"
           }
-        }
-      },
-      "Microsoft.Data.Sqlite/8.0.11": {
-        "dependencies": {
-          "Microsoft.Data.Sqlite.Core": "8.0.11",
-          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.6"
         }
       },
       "Microsoft.Data.Sqlite.Core/8.0.11": {
@@ -45,7 +38,6 @@
       "Microsoft.EntityFrameworkCore/8.0.11": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "8.0.11",
-          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.11",
           "Microsoft.Extensions.Caching.Memory": "8.0.1",
           "Microsoft.Extensions.Logging": "8.0.1"
         },
@@ -64,7 +56,6 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/8.0.11": {},
       "Microsoft.EntityFrameworkCore.Relational/8.0.11": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.11",
@@ -217,9 +208,6 @@
         }
       },
       "SQLitePCLRaw.core/2.1.6": {
-        "dependencies": {
-          "System.Memory": "4.5.3"
-        },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {
             "assemblyVersion": "2.1.6.2060",
@@ -342,7 +330,6 @@
           }
         }
       },
-      "System.Memory/4.5.3": {},
       "Model/1.0.0": {
         "runtime": {
           "Model.dll": {
@@ -366,13 +353,6 @@
       "path": "dapper/2.1.35",
       "hashPath": "dapper.2.1.35.nupkg.sha512"
     },
-    "Microsoft.Data.Sqlite/8.0.11": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-6JocV6S1akKlXaDVpRmmwc9d/M7wXBmiEZ7RxB5lxDk+er9Xi3P+yVYVnh+6IJ+Y6v8pecGWhGwcgH1mONcLuw==",
-      "path": "microsoft.data.sqlite/8.0.11",
-      "hashPath": "microsoft.data.sqlite.8.0.11.nupkg.sha512"
-    },
     "Microsoft.Data.Sqlite.Core/8.0.11": {
       "type": "package",
       "serviceable": true,
@@ -393,13 +373,6 @@
       "sha512": "sha512-++zY0Ea724ku1jptWJmF7jm3I4IXTexfT4qi1ETcSFFF7qj+qm6rRgN7mTuKkwIETuXk0ikfzudryRjUGrrNKQ==",
       "path": "microsoft.entityframeworkcore.abstractions/8.0.11",
       "hashPath": "microsoft.entityframeworkcore.abstractions.8.0.11.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Analyzers/8.0.11": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-NI/AJQjtC7qgWM8Nr85sRkwlog2AnFer5RKP8xTUH0RuPF3nN0tGXBEeYJOLZWp+/+M/C6O7MMDRhKRE8bZwIA==",
-      "path": "microsoft.entityframeworkcore.analyzers/8.0.11",
-      "hashPath": "microsoft.entityframeworkcore.analyzers.8.0.11.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/8.0.11": {
       "type": "package",
@@ -519,13 +492,6 @@
       "sha512": "sha512-PQ2Oq3yepLY4P7ll145P3xtx2bX8xF4PzaKPRpw9jZlKvfe4LE/saAV82inND9usn1XRpmxXk7Lal3MTI+6CNg==",
       "path": "sqlitepclraw.provider.e_sqlite3/2.1.6",
       "hashPath": "sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512"
-    },
-    "System.Memory/4.5.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
-      "path": "system.memory/4.5.3",
-      "hashPath": "system.memory.4.5.3.nupkg.sha512"
     },
     "Model/1.0.0": {
       "type": "project",

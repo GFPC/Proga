@@ -60,3 +60,4 @@ F:\Projects\My\CSharp\Proga\ConsoleApp1\obj\Debug\net8.0-windows\refint\ConsoleA
 F:\Projects\My\CSharp\Proga\ConsoleApp1\obj\Debug\net8.0-windows\ConsoleApp1.pdb
 F:\Projects\My\CSharp\Proga\ConsoleApp1\obj\Debug\net8.0-windows\ConsoleApp1.genruntimeconfig.cache
 F:\Projects\My\CSharp\Proga\ConsoleApp1\obj\Debug\net8.0-windows\ref\ConsoleApp1.dll
+F:\Projects\My\CSharp\Proga\ConsoleApp1\bin\Debug\net8.0-windows\Ninject.dll

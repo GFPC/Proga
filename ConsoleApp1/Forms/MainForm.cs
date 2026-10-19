@@ -30,7 +30,6 @@ namespace ConsoleApp1.Forms
         {
             dgvStudents.DataSource = _logic.GetStudentsDataTable();
 
-            // Style columns
             if (dgvStudents.Columns.Count > 0)
             {
                 if (dgvStudents.Columns["№"] is DataGridViewColumn colNum)

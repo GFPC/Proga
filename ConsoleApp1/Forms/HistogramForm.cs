@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -42,7 +42,6 @@ namespace ConsoleApp1.Forms
                 return;
             }
 
-            // Header
             using (var titleFont = new Font("Segoe UI", 13F, FontStyle.Bold))
             using (var titleBrush = new SolidBrush(Color.FromArgb(33, 37, 41)))
             {
@@ -57,13 +56,13 @@ namespace ConsoleApp1.Forms
 
             Color[] barColors = new[]
             {
-                Color.FromArgb(66, 133, 244),   // Blue
-                Color.FromArgb(52, 168, 83),   // Green
-                Color.FromArgb(251, 188, 5),   // Yellow
-                Color.FromArgb(234, 67, 53),   // Red
-                Color.FromArgb(142, 68, 173),  // Purple
-                Color.FromArgb(230, 126, 34),  // Orange
-                Color.FromArgb(26, 188, 156),  // Teal
+                Color.FromArgb(66, 133, 244),
+                Color.FromArgb(52, 168, 83),
+                Color.FromArgb(251, 188, 5),
+                Color.FromArgb(234, 67, 53),
+                Color.FromArgb(142, 68, 173),
+                Color.FromArgb(230, 126, 34),
+                Color.FromArgb(26, 188, 156),
             };
 
             int startY = bounds.Y + 80;
@@ -90,12 +89,10 @@ namespace ConsoleApp1.Forms
                 int barPixelWidth = (int)Math.Round((double)count / maxCount * chartWidth);
                 if (barPixelWidth < 6) barPixelWidth = 6;
 
-                // Draw Spec Name (truncated if too long)
                 var labelRect = new RectangleF(bounds.X + 20, y + (barHeight - 20) / 2f, labelWidth - 10, 25);
                 var sfLeft = new StringFormat { Trimming = StringTrimming.EllipsisCharacter, FormatFlags = StringFormatFlags.NoWrap };
                 g.DrawString(specName, labelFont, labelBrush, labelRect, sfLeft);
 
-                // Background bar track
                 int barX = bounds.X + 20 + labelWidth;
                 var trackRect = new Rectangle(barX, y, chartWidth, barHeight);
                 using (var trackBrush = new SolidBrush(Color.FromArgb(240, 242, 245)))
@@ -103,7 +100,6 @@ namespace ConsoleApp1.Forms
                     g.FillRectangle(trackBrush, trackRect);
                 }
 
-                // Filled Bar
                 Color color = barColors[index % barColors.Length];
                 var barRect = new Rectangle(barX, y, barPixelWidth, barHeight);
                 using (var barBrush = new SolidBrush(color))
@@ -111,7 +107,6 @@ namespace ConsoleApp1.Forms
                     g.FillRectangle(barBrush, barRect);
                 }
 
-                // Value label on right
                 string countText = $"{count} чел. ({pct:F1}%)";
                 using (var valBrush = new SolidBrush(Color.FromArgb(50, 50, 50)))
                 {

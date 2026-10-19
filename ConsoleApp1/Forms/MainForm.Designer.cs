@@ -43,9 +43,6 @@
             this.pnlTop.SuspendLayout();
             this.SuspendLayout();
 
-            // 
-            // pnlTop
-            // 
             this.pnlTop.BackColor = System.Drawing.Color.FromArgb(245, 247, 250);
             this.pnlTop.Controls.Add(this.lblTotal);
             this.pnlTop.Controls.Add(this.btnOpenHistogram);
@@ -58,9 +55,6 @@
             this.pnlTop.Size = new System.Drawing.Size(1080, 58);
             this.pnlTop.TabIndex = 0;
 
-            // 
-            // btnAdd
-            // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(46, 139, 87);
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -73,9 +67,6 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 
-            // 
-            // btnDelete
-            // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(220, 53, 69);
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -88,9 +79,6 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 
-            // 
-            // btnOpenHistogram
-            // 
             this.btnOpenHistogram.BackColor = System.Drawing.Color.FromArgb(13, 110, 253);
             this.btnOpenHistogram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenHistogram.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -103,9 +91,6 @@
             this.btnOpenHistogram.UseVisualStyleBackColor = false;
             this.btnOpenHistogram.Click += new System.EventHandler(this.btnOpenHistogram_Click);
 
-            // 
-            // lblTotal
-            // 
             this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -117,9 +102,6 @@
             this.lblTotal.Text = "Всего студентов: 0";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 
-            // 
-            // splitContainer
-            // 
             this.splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer.Location = new System.Drawing.Point(0, 58);
             this.splitContainer.Name = "splitContainer";
@@ -127,21 +109,12 @@
             this.splitContainer.SplitterDistance = 580;
             this.splitContainer.TabIndex = 1;
 
-            // 
-            // splitContainer.Panel1
-            // 
             this.splitContainer.Panel1.Controls.Add(this.dgvStudents);
             this.splitContainer.Panel1.Padding = new System.Windows.Forms.Padding(10);
 
-            // 
-            // splitContainer.Panel2
-            // 
             this.splitContainer.Panel2.Controls.Add(this.pnlHistogram);
             this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(10);
 
-            // 
-            // dgvStudents
-            // 
             this.dgvStudents.AllowUserToAddRows = false;
             this.dgvStudents.AllowUserToDeleteRows = false;
             this.dgvStudents.AllowUserToResizeRows = false;
@@ -177,9 +150,6 @@
             this.dgvStudents.Size = new System.Drawing.Size(560, 540);
             this.dgvStudents.TabIndex = 0;
 
-            // 
-            // pnlHistogram
-            // 
             this.pnlHistogram.BackColor = System.Drawing.Color.White;
             this.pnlHistogram.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlHistogram.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -190,9 +160,6 @@
             this.pnlHistogram.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHistogram_Paint);
             this.pnlHistogram.Resize += new System.EventHandler(this.pnlHistogram_Resize);
 
-            // 
-            // MainForm
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(240, 242, 245);

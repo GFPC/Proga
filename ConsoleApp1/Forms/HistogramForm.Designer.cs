@@ -18,18 +18,12 @@
         {
             this.pnlChart = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // pnlChart
-            // 
             this.pnlChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChart.Location = new System.Drawing.Point(0, 0);
             this.pnlChart.Name = "pnlChart";
             this.pnlChart.Size = new System.Drawing.Size(784, 461);
             this.pnlChart.TabIndex = 0;
             this.pnlChart.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChart_Paint);
-            // 
-            // HistogramForm
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

@@ -25,7 +25,6 @@ namespace ConsoleApp1.Cli
                 string choice = ReadInput();
                 if (string.IsNullOrEmpty(choice) && Console.IsInputRedirected)
                 {
-                    // If stream ended
                     running = false;
                     break;
                 }

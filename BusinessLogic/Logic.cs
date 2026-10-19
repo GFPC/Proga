@@ -3,22 +3,28 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using DataAccessLayer;
-using DataAccessLayer.EF;
 using Model;
+using Ninject;
 
 namespace BusinessLogic
 {
     public class Logic
     {
         public IRepository<Student> repository { get; set; }
-
-        public Logic() : this(new EntityRepository<Student>())
+        public IRepository<Student> Repository
         {
+            get => repository;
+            set => repository = value;
         }
 
+        [Inject]
         public Logic(IRepository<Student> repository)
         {
             this.repository = repository;
+        }
+
+        public Logic() : this(new StandardKernel(new SimpleConfigModule()).Get<Logic>().repository)
+        {
         }
 
         public void AddStudent(string name, string speciality, string group)
