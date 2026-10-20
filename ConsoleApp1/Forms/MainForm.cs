@@ -7,7 +7,7 @@ namespace ConsoleApp1.Forms
 {
     public partial class MainForm : Form
     {
-        private readonly Logic _logic;
+        private readonly Logic _logic = null!;
 
         public MainForm(Logic logic)
         {
@@ -15,15 +15,18 @@ namespace ConsoleApp1.Forms
             InitializeComponent();
         }
 
-        public MainForm() : this(new Logic())
+        public MainForm()
         {
-            _logic.SeedInitialData();
+            InitializeComponent();
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            RefreshData();
+            if (!DesignMode && _logic != null)
+            {
+                RefreshData();
+            }
         }
 
         private void RefreshData()

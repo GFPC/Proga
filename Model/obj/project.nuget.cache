@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "BaNx88wUw/U=",
+  "dgSpecHash": "Ohc1A2crdrU=",
   "success": true,
-  "projectFilePath": "F:\\Projects\\My\\CSharp\\Proga\\Model\\Model.csproj",
+  "projectFilePath": "E:\\Projects\\CSharp\\Proga\\Model\\Model.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\greg\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.23\\microsoft.netcore.app.ref.8.0.23.nupkg.sha512",
-    "C:\\Users\\greg\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.23\\microsoft.windowsdesktop.app.ref.8.0.23.nupkg.sha512",
-    "C:\\Users\\greg\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.23\\microsoft.aspnetcore.app.ref.8.0.23.nupkg.sha512"
+    "C:\\Users\\greg\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.26\\microsoft.netcore.app.ref.8.0.26.nupkg.sha512",
+    "C:\\Users\\greg\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.26\\microsoft.windowsdesktop.app.ref.8.0.26.nupkg.sha512",
+    "C:\\Users\\greg\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.26\\microsoft.aspnetcore.app.ref.8.0.26.nupkg.sha512"
   ],
   "logs": []
 }

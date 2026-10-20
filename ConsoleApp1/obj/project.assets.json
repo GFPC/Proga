@@ -1882,32 +1882,39 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\greg\\.nuget\\packages\\": {}
+    "C:\\Users\\greg\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Projects\\My\\CSharp\\Proga\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "E:\\Projects\\CSharp\\Proga\\ConsoleApp1\\ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
-      "projectPath": "F:\\Projects\\My\\CSharp\\Proga\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectPath": "E:\\Projects\\CSharp\\Proga\\ConsoleApp1\\ConsoleApp1.csproj",
       "packagesPath": "C:\\Users\\greg\\.nuget\\packages\\",
-      "outputPath": "F:\\Projects\\My\\CSharp\\Proga\\ConsoleApp1\\obj\\",
+      "outputPath": "E:\\Projects\\CSharp\\Proga\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\greg\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\greg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "F:\\Projects\\My\\CSharp\\Proga\\BusinessLogic\\BusinessLogic.csproj": {
-              "projectPath": "F:\\Projects\\My\\CSharp\\Proga\\BusinessLogic\\BusinessLogic.csproj"
+            "E:\\Projects\\CSharp\\Proga\\BusinessLogic\\BusinessLogic.csproj": {
+              "projectPath": "E:\\Projects\\CSharp\\Proga\\BusinessLogic\\BusinessLogic.csproj"
             }
           }
         }
@@ -1922,7 +1929,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -1947,19 +1954,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.26, 8.0.26]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.26, 8.0.26]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.26, 8.0.26]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.26, 8.0.26]"
           }
         ],
         "frameworkReferences": {
@@ -1970,7 +1977,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\greg\\.dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

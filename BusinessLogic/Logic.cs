@@ -10,21 +10,13 @@ namespace BusinessLogic
 {
     public class Logic
     {
-        public IRepository<Student> repository { get; set; }
-        public IRepository<Student> Repository
-        {
-            get => repository;
-            set => repository = value;
-        }
+        public IRepository<Student> Repository { get; set; }
+        public IRepository<Student> repository => Repository;
 
         [Inject]
         public Logic(IRepository<Student> repository)
         {
-            this.repository = repository;
-        }
-
-        public Logic() : this(new StandardKernel(new SimpleConfigModule()).Get<Logic>().repository)
-        {
+            Repository = repository;
         }
 
         public void AddStudent(string name, string speciality, string group)
