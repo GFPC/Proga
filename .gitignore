@@ -1,4 +1,8 @@
 ## Build results
+[Bb]in/
+[Oo]bj/
+bin/
+obj/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -8,10 +12,21 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
-[Oo]bj/
 [Ll]og/
 [Ll]ogs/
+*.log
+
+# MSBuild / Visual Studio build output
+*.FileListAbsolute.txt
+*.AssemblyInfoInputs.cache
+*.CoreCompileInputs.cache
+*.AssemblyReference.cache
+*.assets.cache
+*.genruntimeconfig.cache
+*.sourcelink.json
+*.nuget.dgspec.json
+project.assets.json
+project.nuget.cache
 
 ## Visual Studio / Rider
 .vs/
@@ -22,3 +37,9 @@ bld/
 *.sln.docstates
 *.DotSettings.user
 *.userprefs
+*.DotSettings
+_ReSharper*/
+
+## Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
