@@ -1,129 +1,74 @@
 using System;
-using System.Drawing;
+using System.Collections.Generic;
 using System.Windows.Forms;
-using BusinessLogic;
+using Model;
+using ConsoleApp1.Views;
 
 namespace ConsoleApp1.Forms
 {
-    public partial class MainForm : Form
+    public partial class MainForm : Form, IView
     {
-        private readonly Logic _logic = null!;
-
-        public MainForm(Logic logic)
-        {
-            _logic = logic;
-            InitializeComponent();
-        }
+        public event Action? ViewLoaded;
+        public event Action? AddStudentRequested;
+        public event Action? DeleteStudentRequested;
 
         public MainForm()
         {
             InitializeComponent();
+
+            btnAdd.Click += (s, e) => AddStudentRequested?.Invoke();
+            btnDelete.Click += (s, e) => DeleteStudentRequested?.Invoke();
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            if (!DesignMode && _logic != null)
+            ViewLoaded?.Invoke();
+        }
+
+        public string StudentName => txtName.Text;
+
+        public string Speciality => txtSpeciality.Text;
+
+        public string Group => txtGroup.Text;
+
+        public int? SelectedStudentId
+        {
+            get
             {
-                RefreshData();
+                if (dgvStudents.CurrentRow != null && dgvStudents.CurrentRow.Tag is int id)
+                {
+                    return id;
+                }
+                return null;
             }
         }
 
-        private void RefreshData()
+        public void DisplayStudents(IReadOnlyList<Student> students)
         {
-            dgvStudents.DataSource = _logic.GetStudentsDataTable();
-
-            if (dgvStudents.Columns.Count > 0)
+            dgvStudents.Rows.Clear();
+            for (int i = 0; i < students.Count; i++)
             {
-                if (dgvStudents.Columns["№"] is DataGridViewColumn colNum)
-                {
-                    colNum.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                    colNum.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                }
-                if (dgvStudents.Columns["ФИО студента"] is DataGridViewColumn colName)
-                {
-                    colName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    colName.FillWeight = 40;
-                }
-                if (dgvStudents.Columns["Направление подготовки"] is DataGridViewColumn colSpec)
-                {
-                    colSpec.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    colSpec.FillWeight = 40;
-                }
-                if (dgvStudents.Columns["Группа"] is DataGridViewColumn colGroup)
-                {
-                    colGroup.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    colGroup.FillWeight = 20;
-                }
+                var s = students[i];
+                int rowIndex = dgvStudents.Rows.Add(i + 1, s.Name, s.Speciality, s.Group);
+                dgvStudents.Rows[rowIndex].Tag = s.Id;
             }
 
-            lblTotal.Text = $"Всего студентов: {_logic.GetStudentsRecords().Count}";
+            lblTotal.Text = $"Всего студентов: {students.Count}";
             btnDelete.Enabled = dgvStudents.Rows.Count > 0;
-            pnlHistogram.Invalidate();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        public void ShowError(string message)
         {
-            using var form = new AddStudentForm();
-            if (form.ShowDialog(this) == DialogResult.OK)
-            {
-                try
-                {
-                    _logic.AddStudent(form.StudentName, form.StudentSpeciality, form.StudentGroup);
-                    RefreshData();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ошибка при добавлении: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            MessageBox.Show(message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        public void ClearInput()
         {
-            if (dgvStudents.CurrentRow == null || dgvStudents.CurrentRow.Index < 0)
-            {
-                MessageBox.Show("Пожалуйста, выберите студента в таблице для удаления.", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            int selectedIndex = dgvStudents.CurrentRow.Index;
-            string studentName = dgvStudents.CurrentRow.Cells["ФИО студента"].Value?.ToString() ?? "выбранного студента";
-
-            var result = MessageBox.Show(
-                $"Вы действительно хотите удалить студента:\n\"{studentName}\"?",
-                "Подтверждение удаления",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                bool deleted = _logic.DeleteStudentAt(selectedIndex);
-                if (deleted)
-                {
-                    RefreshData();
-                }
-                else
-                {
-                    MessageBox.Show("Не удалось удалить студента.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void btnOpenHistogram_Click(object sender, EventArgs e)
-        {
-            using var form = new HistogramForm(_logic);
-            form.ShowDialog(this);
-        }
-
-        private void pnlHistogram_Paint(object sender, PaintEventArgs e)
-        {
-            HistogramForm.RenderHistogram(e.Graphics, pnlHistogram.ClientRectangle, _logic);
-        }
-
-        private void pnlHistogram_Resize(object sender, EventArgs e)
-        {
-            pnlHistogram.Invalidate();
+            txtName.Clear();
+            txtSpeciality.Clear();
+            txtGroup.Clear();
+            txtName.Focus();
         }
     }
 }

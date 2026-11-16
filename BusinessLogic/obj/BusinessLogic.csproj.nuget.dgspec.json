@@ -1,42 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\CSharp\\Proga\\BusinessLogic\\BusinessLogic.csproj": {}
+    "F:\\Projects\\My\\CSharp\\Proga\\BusinessLogic\\BusinessLogic.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\CSharp\\Proga\\BusinessLogic\\BusinessLogic.csproj": {
+    "F:\\Projects\\My\\CSharp\\Proga\\BusinessLogic\\BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\CSharp\\Proga\\BusinessLogic\\BusinessLogic.csproj",
+        "projectUniqueName": "F:\\Projects\\My\\CSharp\\Proga\\BusinessLogic\\BusinessLogic.csproj",
         "projectName": "BusinessLogic",
-        "projectPath": "E:\\Projects\\CSharp\\Proga\\BusinessLogic\\BusinessLogic.csproj",
+        "projectPath": "F:\\Projects\\My\\CSharp\\Proga\\BusinessLogic\\BusinessLogic.csproj",
         "packagesPath": "C:\\Users\\greg\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\CSharp\\Proga\\BusinessLogic\\obj\\",
+        "outputPath": "F:\\Projects\\My\\CSharp\\Proga\\BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\greg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\greg\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Projects\\CSharp\\Proga\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "E:\\Projects\\CSharp\\Proga\\DataAccessLayer\\DataAccessLayer.csproj"
+              "F:\\Projects\\My\\CSharp\\Proga\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "F:\\Projects\\My\\CSharp\\Proga\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "E:\\Projects\\CSharp\\Proga\\Model\\Model.csproj": {
-                "projectPath": "E:\\Projects\\CSharp\\Proga\\Model\\Model.csproj"
+              "F:\\Projects\\My\\CSharp\\Proga\\Model\\Model.csproj": {
+                "projectPath": "F:\\Projects\\My\\CSharp\\Proga\\Model\\Model.csproj"
               }
             }
           }
@@ -51,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -76,15 +70,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
+              "version": "[8.0.23, 8.0.23]"
             }
           ],
           "frameworkReferences": {
@@ -92,40 +86,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\greg\\.dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Projects\\CSharp\\Proga\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "F:\\Projects\\My\\CSharp\\Proga\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\CSharp\\Proga\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "F:\\Projects\\My\\CSharp\\Proga\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "E:\\Projects\\CSharp\\Proga\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "F:\\Projects\\My\\CSharp\\Proga\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\greg\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\CSharp\\Proga\\DataAccessLayer\\obj\\",
+        "outputPath": "F:\\Projects\\My\\CSharp\\Proga\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\greg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\greg\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Projects\\CSharp\\Proga\\Model\\Model.csproj": {
-                "projectPath": "E:\\Projects\\CSharp\\Proga\\Model\\Model.csproj"
+              "F:\\Projects\\My\\CSharp\\Proga\\Model\\Model.csproj": {
+                "projectPath": "F:\\Projects\\My\\CSharp\\Proga\\Model\\Model.csproj"
               }
             }
           }
@@ -140,7 +128,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -173,15 +161,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
+              "version": "[8.0.23, 8.0.23]"
             }
           ],
           "frameworkReferences": {
@@ -189,32 +177,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\greg\\.dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Projects\\CSharp\\Proga\\Model\\Model.csproj": {
+    "F:\\Projects\\My\\CSharp\\Proga\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\CSharp\\Proga\\Model\\Model.csproj",
+        "projectUniqueName": "F:\\Projects\\My\\CSharp\\Proga\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "E:\\Projects\\CSharp\\Proga\\Model\\Model.csproj",
+        "projectPath": "F:\\Projects\\My\\CSharp\\Proga\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\greg\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\CSharp\\Proga\\Model\\obj\\",
+        "outputPath": "F:\\Projects\\My\\CSharp\\Proga\\Model\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\greg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\greg\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -233,7 +215,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -252,15 +234,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
+              "version": "[8.0.23, 8.0.23]"
             }
           ],
           "frameworkReferences": {
@@ -268,7 +250,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\greg\\.dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
